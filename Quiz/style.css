@@ -49,3 +49,8 @@ button:hover {
   font-size: 18px;
   color: #8d1616;
 }
+
+footer{
+  background: rgba(242, 238, 238, 0.6);
+  color: #8d1616;
+}
