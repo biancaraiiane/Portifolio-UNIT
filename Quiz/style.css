@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "HarryP";
+  src: url("./assets/fonts/HARRYP__.TTF") format("truetype");
+}
+
+body {
+  font-family: "HarryP", sans-serif;
+  text-align: center;
+  margin-top: 70px;
+  background: url("./assets/bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 48px;
+  color: #8d1616;
+}
+
+#quiz-container {
+  background: white;
+  color: #8d1616;
+  font-size: 24px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+button {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #8d1616;
+  background-color: #a32929;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8d1616;
+}
+
+#score {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #8d1616;
+}
