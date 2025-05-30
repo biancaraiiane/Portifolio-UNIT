@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corrida</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/img/Captura de tela 2025-05-27 211842.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Selecione a cor do carro</h1>
+    <div id="selectedColor">Carro selecionado: ?</div>
+  </header>
+
+  <div id="track">
+    <img id="carWhite" class="car" src="assets/img/white_lotus.png" alt="Carro Branco">
+    <img id="carRed" class="car" src="assets/img/red_kia.png" alt="Carro Vermelho">
+  </div>
+
+  <div id="buttons">
+    <div class="btn" id="btnAcelerar">Acelerar</div>
+    <div class="btn" id="btnDesacelerar">Desacelerar</div>
+    <div class="btn" id="resetar">Resetar</div>
+  </div>
+
+  <audio id="carSound" src="assets/audio/cars.mp3"></audio>
+<script src="script.js"></script>
+</body>
+</html>
