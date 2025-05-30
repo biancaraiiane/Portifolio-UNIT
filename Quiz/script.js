@@ -14,6 +14,16 @@ const quizData = [
     options: ["Dumbledore", "Snape", "McGonagall", "Voldemort"],
     correctIndex: 0,
   },
+  {
+    question: "Qual é a casa do Harry em Hogwarts?",
+    options: ["Corvinal", "Sonserina", "Grifinória", "Lufa-Lufa", "Durmstrang"],
+    correctIndex: 2,
+  },
+  {
+    question: "Qual é o nome da coruja do Harry?",
+    options: ["Edwiges", "Crookshanks", "Fawkes", "Scabbers", "Bichento"],
+    correctIndex: 0,
+  },
 ];
 
 let currentQuestion = 0;
@@ -72,7 +82,13 @@ function showResult() {
   questionEl.textContent = "Quiz finalizado!";
   optionsEl.innerHTML = "";
   scoreEl.textContent = `Você acertou ${score} de ${quizData.length} perguntas.`;
+
+  if (score > 3) {
+    alert(" Parabéns!!! Você ganhou o quiz.");
+  } else if (score === 1 || score === 2) {
+    alert(" Você perdeu!!!");
+  }
 }
 
-// Iniciar quiz
+
 loadQuestion();
