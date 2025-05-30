@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/M-icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <title>BankSE - marcos-grocha</title>
+</head>
+
+<body>
+  <div class="phone-container">
+    <div class="screen">
+      <div class="notch"></div>
+
+      <div class="header">
+        <div class="logo">
+          <div class="logo-icon"></div>
+          <span class="logo-text">BankSE</span>
+        </div>
+        <div class="user-greeting">
+          <span>Olá, Marcão</span>
+          <div class="user-avatar"></div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="account-section">
+          <div class="balance-card">
+            <div class="balance-label">Conta</div>
+            <div class="balance-amount" id="balance">R$ 10,00</div>
+          </div>
+          <div class="transactions-summary">
+            <div class="summary-item income">
+              <div class="summary-label">Entradas</div>
+              <div class="summary-amount income" id="totalIncome">
+                R$ 10,00
+              </div>
+            </div>
+            <div class="summary-item expense">
+              <div class="summary-label">Saídas</div>
+              <div class="summary-amount expense" id="totalExpense">
+                R$ 0,00
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="insurance-banner">
+          <div class="insurance-content">
+            <div class="family-emoji">👨‍👩‍👧‍👦</div>
+            <div class="insurance-text">
+              <h3>Seguros</h3>
+              <p>Proteja sua família com nossos planos de seguro</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="action-btn" id="pixBtn">
+            <div class="btn-icon pix"></div>
+            <span class="btn-text">Área PIX</span>
+          </button>
+          <button class="action-btn" id="payBtn">
+            <div class="btn-icon pay"></div>
+            <span class="btn-text">Pagar</span>
+          </button>
+          <button class="action-btn" id="investBtn">
+            <div class="btn-icon invest"></div>
+            <span class="btn-text">Investir</span>
+          </button>
+        </div>
+
+        <div class="transactions-section">
+          <h3 class="section-title">Últimas transações</h3>
+          <div id="transactionsList">
+            <div class="no-transactions">Não constam transações</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        © 2025 BankSE Mobile - Developer:
+        <a href="https://www.linkedin.com/in/marcos-grocha/" target="_blank">
+          marcos-grocha</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="pixModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Área PIX</h2>
+        <button class="close-btn" id="closePixModal">&times;</button>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" id="receiveTab">RECEBER</button>
+        <button class="tab-btn" id="transferTab">TRANSFERIR</button>
+      </div>
+
+      <div id="receiveForm">
+        <div id="receiveMessage"></div>
+        <div class="form-group">
+          <label class="form-label">CNPJ/CPF</label>
+          <input type="text" class="form-input" id="receiveCpfCnpj" placeholder="Digite o CNPJ/CPF" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Valor a receber</label>
+          <input type="number" class="form-input" id="receiveAmount" placeholder="0,00" step="0.01" min="0" />
+        </div>
+        <button class="submit-btn" id="receiveSubmit">Receber</button>
+      </div>
+
+      <div id="transferForm" style="display: none">
+        <div id="transferMessage"></div>
+        <div class="form-group">
+          <label class="form-label">Chave PIX</label>
+          <input type="text" class="form-input" id="transferPixKey" placeholder="Digite a chave PIX" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Valor a transferir</label>
+          <input type="number" class="form-input" id="transferAmount" placeholder="0,00" step="0.01" min="0" />
+        </div>
+        <button class="submit-btn" id="transferSubmit">Transferir</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="message-modal" id="messageModal">
+    <div class="message-content">
+      <h3 id="messageTitle">Aviso</h3>
+      <p id="messageText"></p>
+      <button class="message-btn" id="messageOk">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

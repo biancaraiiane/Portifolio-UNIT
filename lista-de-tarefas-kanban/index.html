@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="M-icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Gerenciador de Tarefas - marcos-grocha</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>📋 Kanban Board</h1>
+
+    <div class="task-input-container">
+      <input type="text" id="taskInput" placeholder="Digite a descrição da tarefa..." maxlength="200">
+      <button id="addTaskBtn">Adicionar Tarefa</button>
+    </div>
+
+    <div class="kanban-board">
+      <div class="kanban-column" data-status="em-aberto">
+        <div class="column-header em-aberto">
+          Em Aberto
+          <div class="task-counter">0</div>
+        </div>
+        <div class="tasks-container" id="em-aberto-tasks"></div>
+      </div>
+
+      <div class="kanban-column" data-status="negociacao">
+        <div class="column-header negociacao">
+          Bid (Negociação)
+          <div class="task-counter">0</div>
+        </div>
+        <div class="tasks-container" id="negociacao-tasks"></div>
+      </div>
+
+      <div class="kanban-column" data-status="em-andamento">
+        <div class="column-header em-andamento">
+          Em Andamento
+          <div class="task-counter">0</div>
+        </div>
+        <div class="tasks-container" id="em-andamento-tasks"></div>
+      </div>
+
+      <div class="kanban-column" data-status="entregue">
+        <div class="column-header entregue">
+          Entregue
+          <div class="task-counter">0</div>
+        </div>
+        <div class="tasks-container" id="entregue-tasks"></div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy;<a href="https://www.linkedin.com/in/marcos-grocha/" target="_blank"> marcos-grocha</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
